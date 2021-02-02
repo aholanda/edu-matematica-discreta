@@ -1,0 +1,212 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[]{fontspec}
+\usepackage[brazil]{babel}
+\usepackage{enumerate}
+\usepackage[right=2cm,bottom=2cm]{geometry}
+
+\title{Exame de Matemática Discreta}
+\author{prof. Adriano J. Holanda}
+\date{\today}
+
+\def\tupla#1{\langle #1 \rangle}
+
+\begin{document}
+
+\maketitle
+
+\noindent Faculdade ``Dr. Francisco Maeda'' -- FAFRAM\\
+\noindent Curso: Sistemas de Informação, Ciclo: $4^o$\\
+\noindent Nome completo:
+
+\paragraph{Questão 0 (3 pontos)} Determinar se as seguintes relações
+são: reflexiva, antirreflexiva, simétrica e antisimétrica:
+
+\begin{enumerate}[(a)]
+\item
+$R_1=\{\tupla{1,3},\tupla{1,1},\tupla{2,2},\tupla{3,1},\tupla{3,3}\}$
+\item
+$R_2=\{\tupla{1,1},\tupla{2,2},\tupla{3,3},\tupla{1,2},\tupla{2,3}\}$
+\item $R_3=\{\tupla{1,1},\tupla{1,2},\tupla{2,3},\tupla{3,1}\}$
+\item $R_4 = A\times A$
+\item $R_5 = \emptyset$
+\end{enumerate}
+
+\noindent Explique os critérios utilizados para a classificação das relações.
+
+\paragraph{Questão 1. (3 pontos)} Ache o máximo divisor comum (MDC), demonstrando os passos
+intermediários das operações, utilizando o algoritmo de Euclides para
+os seguintes valores:
+
+\begin{enumerate}[(a)]
+\begin{minipage}{.5\textwidth}
+\item mdc(15, 5)
+\item mdc(23, 19)
+\item mdc(12, 15)
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\item mdc(21, 18)
+\item mdc(21, 19)
+\item mdc(31, 46)
+\end{minipage}
+\end{enumerate}
+
+\paragraph{Questão 2.(2 ponto(s))} Quantos números de 3 algarismos
+podemos formar com os dígitos 2, 3, 4, 5, 8, 9, supondo que não haja
+repetição de dígitos nos números formados.
+
+\paragraph{Questão 3.(2 ponto(s))} Quantos números de 3 algarismos
+podemos formar com os dígitos primos $p$, com $2\leq p \leq 19$, supondo
+que não haja repetição de dígitos nos números formados.
+
+
+\vfill
+
+\hrule\bigskip
+{\footnotesize
+\noindent {\bf Regras}\\
+\begin{enumerate}
+\item Duração da prova: 1 hora;
+\item Prova sem consulta;
+\item A prova pode ser feita a lápis;
+\item Não é permitido usar calculadora.
+
+\end{enumerate}
+}
+
+\begin{flushright}
+\bf\large  Boa Prova
+\end{flushright}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BUFFER
+ \paragraph{Questão 0. (4 pontos)} Sejam $A=\{2,3,4,5,12\}$ e $B=\{3,4,6,10\}$. Para cada uma
+ das seguintes relações:
+ \label{ex:rel}
+
+ \begin{enumerate}[(a)]
+ \item $R_1=\{\langle x,y\rangle\in A\times B : x \mbox{ é divisível
+ por } y\}$
+ \item $R_2=\{\langle x,y\rangle\in A\times B : x \mbox{ é ímpar } \land
+ y \mbox{ é par}\}$
+ \item $R_3=\{\langle x,y\rangle\in A\times B : x \mbox{ e } y \mbox{
+ sejam números primos}\}$
+% \item $R_4=\{\langle x,y\rangle\in A\times B : y=2*x\}$
+ \item $R_4=\{\langle x,y\rangle\in A\times B : x=y \lor
+   y=x+1\}$~\footnote{$\lor$ - conectivo lógico {\tt ou}.}
+ \end{enumerate}
+
+ \begin{enumerate}[(1)]
+ \item explicite os pares ordenados da relação;
+ \item faça a representação gráfica;
+ \item determine o domínio da definição;
+ \item determine o conjunto imagem.
+ \end{enumerate}
+
+
+
+\paragraph{Questão 2. (3 pontos)} Efetue as operações {\tt módulo} ($\Delta$) a seguir, mostrando
+os cálculos intermediários:
+\def\mod#1#2{$#1\Delta#2$}
+\begin{enumerate}[(a)]
+\begin{minipage}{.5\textwidth}
+\item \mod{23}{5}
+\item \mod{23}{-5}
+\item \mod{-23}{5}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\item \mod{-23}{-5}
+\item \mod{555}{444}
+\item \mod{1000}{323}
+\end{minipage}
+\end{enumerate}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN OF TESTE 1
+
+\ifnum\exam=\testeum
+
+\exnew{3} Dados os $A=\{1\}$; $B=\{2\}$ e $C = \{\{1\}, 1\}$, classifique
+como verdadeira (V) ou falsa (F) as seguintes afirmações:
+
+\bigskip
+
+\begin{minipage}{0.45\textwidth}
+\begin{enumerate}[a. (\ )]
+\item $A\subset B$ %X
+\item $A\subseteq B$%X
+\item $A = B$
+\item $A \in B$
+\item $A\subset C$%X
+\item $A\subseteq C$%X
+\item $A\in C$%X
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{enumerate}[A. (\ )]
+\item $A = C$
+\item $1 \in A$%X
+\item $1 \in C$%X
+\item $\{1\} \in A$
+\item $\{1\} \in C$%X
+\item $\emptyset \notin C$%X
+\item $\emptyset \subseteq C$%X
+\end{enumerate}
+\end{minipage}
+
+\exnew{3} Dados os conjuntos $A=\{1,2,3\}$, $B=\{3,4,5\}$ e
+$C=\{4,5,7\}$, classifique como verdadeira (V) ou falsa (F) as seguintes
+afirmações:
+
+\begin{enumerate}[(a) ( )]
+\item $A\cup B = \{1,2,4,5\}$
+\item $A\cap B = \{3,7\}$
+\item $A\cap C = \{7\}$
+\item $A\cap B\cap C = \emptyset$
+\item $A - B = \{1,2\}$
+\item $B - A = \{4,5\}$
+\item $A\Delta B = \{1,2,4,5\}$
+\item $A\cup B \cap C = \{4,5\}$
+\item $A\cap B \cup C = \{4,5,7\}$
+\item $ B \Delta C = \{3,7\}$
+\end{enumerate}
+
+\exnew{4} Dados os conjuntos $A=\{2,3,6,7,8,11\}$, $B=\{0,1,4,5,8,9,12,15\}$, classifique
+como verdadeira (V) ou falsa (F) as seguintes afirmações:
+
+\def\tuple#1{\langle{#1}\rangle}
+\begin{enumerate}[(a)( )]
+\item $R_1=\{\tuple{x,y}\in A\times B:x=\sqrt{y}\}=\{\tuple{2,4},
+  \tuple{3,9}\}$
+\item $R_2=\{\tuple{x,y}\in A\times B:x=y^2\}=\{\tuple{2,4}, 
+  \tuple{3,9}\}$
+\item $R_3=\{\tuple{x,y}\in A\times B:x=y+1\}=\{\tuple{3,4},\tuple{7,8},
+  \tuple{8,9}\}, \tuple{11,12}$
+ \item $R_4=\{\tuple{x,y}\in A\times B:x \mbox{ é par e primo } \land
+  y\mbox{ é impar e primo }\}=\{\tuple{2,1}, \tuple{2,5}, \tuple{3,1},
+  \tuple{3,5}, \tuple{7,1}, \tuple{7,15}\}$
+ \item $R_5=\{\tuple{x,y}\in A\times B:x=y-4\}=\{\tuple{8,12},
+   \tuple{11,15}\}$
+\item $R_6=\{\tuple{x,y}\in A\times B:x \mbox{ é divisível por }
+  y\}=\{\tuple{8,4}, \tuple{8,8}\}$
+\item $R_7=\{\tuple{x,y}\in A\times B:y=x*2\}=\{\tuple{2,4},
+\tuple{6,12}, \tuple{8,16}\}$
+\item $R_8=\{\tuple{x,y}\in A\times B:x\mbox{ é par } \land y \mbox{ é
+    negativo }\}=\emptyset$
+\item $R_9=\{\tuple{x,y}\in A\times B:x=\sqrt[3]{y}\}=\{\tuple{2,8}\}$
+\item $R_{10}=\{\tuple{x,y}\in A\times B:x=y^3\}=\{\tuple{2,8}\}$
+\end{enumerate}
+
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END OF TESTE 1
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN OF PROVA 1
+
+\ifnum\exam=\provaum
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END OF PROVA 1

@@ -1,0 +1,165 @@
+\lecturetitle{\course}{Relações e Cardinalidade de Conjuntos}
+
+\frame{\maketitle}
+
+\lecture{Relações}{relations}
+
+\section{\inserttitle}
+
+\begin{frame}{\inserttitle}
+\small
+  \begin{block}{Definição}
+    Sejam $A$ e $B$ conjuntos. Uma \alert{relação} $R$ de $A$ em $B$ é
+    um subconjunto de um produto cartesiano $A\times B$, ou seja:
+    \[R=A\subseteq B\]
+    \noindent sendo que:\\
+    \noindent $A$ é denominado \emph{domínio} de $R$ e\\
+    \noindent $B$ \emph{contradomínio} de $R$.
+  \end{block}
+  \bigskip\onslide<2>
+Uma relação $R\subseteq A\times B$ também é denotada como segue:
+\[ R:A\rightarrow B\]
+\noindent e um elemento $\tu{a,b}\in R$ é frequentemente denotao de
+forma infixada, como segue:
+\[a\ R\ b\]
+
+\end{frame}
+
+\begin{frame}{Relação}
+  
+  \begin{block}{Exemplo}
+    Sejam $A=\{a\}$, $B=\{a,b\}$ e $C=\{0,1,2\}$. Então, são relações:
+    \begin{enumerate}[<+-| alert@+>]
+    \item $\emptyset$ é uma relação de $A$ em $B$, $A$ em $C$ e $B$ em $C$;
+    \item $A\times B=\{\tu{a,a},\tu{a,b}\}$ é uma relação com origem
+      em $A$ e destino em $B$;
+    \item Considerando o domínio $A$ e o contradomínio $B$, a
+      \emph{relação} de igualdade é $\{\tu{a,a}\}$;
+    \item $\{\tu{0,1}, \tu{0,2}, \tu{1,2}\}$ é a relação ``menor que''
+      ($<$) de $C$ em $C$;
+    \item $\{\tu{0,a},\tu{1,b}\}$ é uma relação de $C$ em $B$.
+    \end{enumerate}
+  \end{block}
+
+\end{frame}
+
+\def\mysection{Domínio de definição, conjunto imagem}
+
+\subsection{\mysection}
+
+\begin{frame}{\mysection}
+  
+  \begin{block}{Definição}
+    Seja {\bf $R:A\rightarrow B$} uma relação. Então:
+
+    \begin{itemize}[<+-| alert@+>]
+    \item Se $\tu{a,b}\in R$, então se afirma que $R$ está \emph{definida}
+      para $A$, e que $b$ é a \emph{imagem} de $a$;
+    \item O conjunto de todos os elementos de $A$ para as quais $R$
+      está definida é denominada \emph{domínio de definição};
+    \item O conjunto de todos os elementos de $B$, imagem de $R$, é
+      denominada \emph{conjunto imagem}.
+    \end{itemize}
+  \end{block}
+  
+\end{frame}
+
+\begin{frame}{\mysection}
+
+  \begin{block}{Exemplo}
+    Sejam $A=\{a\}$, $B=\{a,b\}$ e $C=\{0,1,2\}$, então:
+    
+    \begin{enumerate}[<+-| alert@+>]
+    \item Para a relação $\emptyset$: $A\rightarrow B$, o domínio de
+      definição e o conjunto imagem são vazios;
+    \item Para a \alert{endorrelação$^*$} $\tu{C,<}$, dado que $<$ é
+      definida por $\{\tu{0,1}, \tu{0,2}, \tu{1,2}\}$, o domínio de
+      definição é $\{0,1\}$ e a imagem é $\{1,2\}$;
+    \item Para a relação $=:A\rightarrow B$, o conjunto $\{a\}$ é o
+      domínio de definição e o conjunto imagem.
+    \end{enumerate}
+  \end{block}
+
+\hfill
+$^*$ Endorrelação ou autorrelação é uma relação $R:A\rightarrow A$
+(origem e destino no mesmo conjunto).
+  
+\end{frame}
+
+\def\mysection{Aplicações}
+\subsection{\mysection}
+
+\begin{frame}{\mysection}
+\footnotesize
+  \begin{block}{Banco de Dados Relacional}
+    Sejam os conjuntos \emph{País} e \emph{Continente}, aplicando a
+    relação \emph{``Fica em''} obtemos: \\
+    \bigskip
+    \begin{minipage}[h]{.25\linewidth}
+      \begin{tabular}[h]{|c|}\hline
+        \bf País \\\hline
+        Brasil\\
+        Turquia\\
+        Alemanha\\
+        Coreia do Sul\\
+        Austrália\\\hline
+      \end{tabular}
+    \end{minipage}
+    \begin{minipage}[h]{.25\linewidth}
+    \begin{tabular}[h]{|c|}\hline
+      \bf Continente\\\hline
+      América\\
+      Oceania\\
+      África\\
+      Ásia\\
+      Europa\\\hline
+    \end{tabular}\onslide<2>
+    \end{minipage}$\Rightarrow$
+    \begin{minipage}[h]{.35\linewidth}
+      \begin{tabular}[h]{|c|c|}\hline
+        \multicolumn{2}{|c|}{\bf Fica em} \\\hline
+        Brasil & América\\
+        Turquia & Europa\\
+        Turquia & Ásia\\
+        Alemana & Europa\\
+        Coreia do Sul & Ásia\\
+        Austrália & Oceania\\\hline
+      \end{tabular}
+    \end{minipage}
+  \end{block}
+
+\end{frame}
+
+\def\mysection{Exercício}
+\section{\mysection}
+\begin{frame}{\mysection}
+  \small
+  Sejam $A=\{2,3,4,5\}$ e $B=\{3,4,5,6,10\}$, para cada uma das
+  seguintes relações:
+  \begin{enumerate}\footnotesize
+    \begin{minipage}[h]{.475\linewidth}
+    \item $R_1=\{\tu{x,y}\in A\times B|$\\$x\text{ é divisível por }y\}$\\
+    \item $R_2=\{\tu{x,y}\in A\times B$\\$|x*y=12\}$\\
+    \end{minipage}
+    \begin{minipage}[h]{.45\linewidth}
+    \item $R_3=\{\tu{x,y}\in A\times B|x=y+1\}$\\
+    \item $R_3=\{\tu{x,y}\in A\times B|x\geq y\}$\\
+    \end{minipage}
+  \end{enumerate}
+  \begin{itemize}
+  \item explicite as tuplas da relação;
+  \item faça uma representação gráfica no plano cartesiano;
+  \item determine o domínio de definição;
+  \item determine o conjunto imagem.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Bibliografia}
+  \begin{thebibliography}{5}
+  \bibitem[Menezes]{menezes2010}
+    {Paulo Blauth Menezes}
+    \newblock {Matematica Discreta para Computa\c{c}\~{a}o e Inform\'{a}tica}
+    \newblock {Editora Bookman}, {2010}, {3$^a$ edi\c{c}\~{a}o}.
+  \end{thebibliography}
+\end{frame}
+

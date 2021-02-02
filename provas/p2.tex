@@ -1,0 +1,91 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[brazil]{babel}
+\usepackage{fontspec}
+\usepackage{enumerate}
+
+\def\tupla#1{\langle #1\rangle}
+\def\mod#1#2{$#1\Delta#2$}
+
+\newcounter{exn}\setcounter{exn}{0}
+
+\def\ex#1{\paragraph{Questão \arabic{exn}\addtocounter{exn}{1}.} \marginpar{\footnotesize \hfill #1 ponto(s)}}
+
+
+\title{$2^a$ Prova de Matemática Discreta}
+\author{prof. Adriano J. Holanda}
+\date{29 de novembro de 2016}
+
+
+\begin{document}
+\maketitle
+
+\noindent Faculdade ``Dr. Francisco Maeda'' -- FAFRAM\\
+\noindent Curso: Sistemas de Informação, 4$^o$ Ciclo\\
+\begin{minipage}{.225\textwidth}
+\noindent Nome completo:
+\end{minipage}
+\begin{minipage}{.8\textwidth}
+  {$\rightarrow$}~\hrule
+\end{minipage}
+
+\ex{2} Desenvolva as seguintes expressões utilizando o triângulo de Pascal:
+
+\begin{enumerate}[(a)]
+\begin{minipage}{.5\textwidth}
+\item $\left( \frac{x^3}{2} - \frac{1}{y^2}\right)^4$ 
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\item $\left( 2x^2 + \frac{1}{x^2}\right)^3$ 
+\end{minipage}
+\end{enumerate}
+
+\ex{3} Ache o máximo divisor comum (mdc), demonstrando os passos
+intermediários das operações, utilizando o algoritmo de Euclides para
+os seguintes valores:
+
+\begin{enumerate}[(a)]
+\begin{minipage}{.5\textwidth}
+\item mdc(10, 4)
+\item mdc(17, 11)
+\item mdc(121, 15)
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\item mdc(21, 11)
+\item mdc(21, 7)
+\item mdc(31, 26)
+\end{minipage}
+\end{enumerate}
+
+\ex{3} Efetue as operações {\tt módulo} ($\Delta$) a seguir, mostrando
+os cálculos intermediários:
+
+\begin{enumerate}[(a)]
+\begin{minipage}{.5\textwidth}
+\item \mod{11}{3}
+\item \mod{11}{-3}
+\item \mod{-11}{3}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\item \mod{-11}{-3}
+\item \mod{555}{333}
+\item \mod{1000}{321}
+\end{minipage}
+\end{enumerate}
+
+\ex{2} No mapeamento do endereço da memória principal para a memória
+cache podemos utilizar a operação módulo para determinar as posições
+de escrita e busca. Supondo que em nosso sistema de computação, a
+memória principal tenha {\bf 8} endereços e a memória cache {\bf 4},
+faça o esquema de distribuição da memória principal para a cache
+utilizando a configuração associativa de {\bf 1} via, também chamado 
+mapeamento direto.
+
+\vfill
+
+\begin{flushright}
+\bf\large  Boa Prova
+\end{flushright}
+
+\end{document}
+

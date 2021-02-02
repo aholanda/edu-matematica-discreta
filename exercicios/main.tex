@@ -1,0 +1,38 @@
+\documentclass[twoside,10pt]{article}
+
+\usepackage{fontspec}
+\usepackage[portuguese]{babel}
+\usepackage{a4wide}
+\usepackage{enumerate}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+%def exercise
+\newcounter{exc}\setcounter{exc}{0}
+\def\exercise{\bigskip
+\addtocounter{exc}{1}\paragraph{Exercício \arabic{exc}.}}
+
+%defpar
+\newcommand\ordpar[1]{{\langle #1\rangle}}%
+
+\title{Lista de Matemática Discreta}
+\author{Adriano J. Holanda}
+\date{\today}
+
+\def\tupla#1{\langle #1\rangle}
+
+\begin{document}
+
+\maketitle
+
+%\section{No\c{c}\~oes b\'asicas de teoria dos conjuntos}
+
+%\input conjuntos
+
+%\input relacoes
+
+%\input binomio
+
+\input modulo % include MDC:Euclid
+
+\end{document}

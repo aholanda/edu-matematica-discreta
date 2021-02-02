@@ -1,0 +1,103 @@
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: main.tex
+%%% End: 
+
+\def\<#1\>{\langle #1 \rangle}
+
+\subsection{Relações}
+\setcounter{exc}{0}
+
+\ifnum1=2
+
+\exercise{} Sejam $A=\{2,3,4,5\}$ e $B=\{3,4,5,6,10\}$. Para cada uma
+das seguintes relações:
+\label{ex:rel}
+\begin{enumerate}[(1)]
+\item explicite os pares ordenados da rela\c{c}\~ao;
+\item fa\c{c}a a representação gr\'afica;
+\item determine o domínio da defini\c{c}\~ao;
+\item determine o conjunto imagem.
+\end{enumerate}
+
+\begin{enumerate}[(a)]
+\item $R_1=\{\langle x,y\rangle\in A\times B : y \mbox{ é divisível
+por } x\}$
+\item $R_2=\{\langle x,y\rangle\in A\times B : x \mbox{ é par } \land
+y \mbox{ é impar}\}$
+\item $R_3=\{\langle x,y\rangle\in A\times B : x \mbox{ e } y \mbox{
+sejam números primos}\}$
+\item $R_4=\{\langle x,y\rangle\in A\times B : y/x=2\}$
+\end{enumerate}
+
+\exercise{} Para os mesmos conjuntos do exerc\'icio anterior, determine
+o conjunto resultante das seguintes opera\c{c}\~oes:
+
+\begin{enumerate}[(a)]
+\item $A\cup B$
+\item $A\cap B$
+\item $A\backslash B$
+\item $B\backslash A$
+\item $A\Delta B$
+\item $A\times B$
+\end{enumerate}
+
+\exercise{} Ache as rela\c{c}\~oes inversas $R^{-1}$ para as rela\c{c}\~oes
+obtidas no exercício~1.
+
+\fi
+
+\subsection{Propriedades de uma endorrelação}
+
+\exercise{} Determinar se as seguintes rela\c{c}\~oes s\~ao reflexiva,
+anti-reflexiva, sim\'etrica, anti-sim\'etrica e transitiva:
+
+\begin{enumerate}[(a)]
+\item
+$R_1=\{\tupla{1,2},\tupla{1,1},\tupla{2,2},\tupla{2,1},\tupla{3,3}\}$
+\item
+$R_2=\{\tupla{1,1},\tupla{2,2},\tupla{3,3},\tupla{1,2},\tupla{2,3}\}$
+\item $R_3=\{\tupla{1,1},\tupla{1,2},\tupla{2,3},\tupla{3,1}\}$
+\item $R_4 = A\times A$
+\item $R_5 = \emptyset$
+\end{enumerate}
+
+\exercise{} [Antonio Alfredo Ferreira Loureiro] Para as relações a
+seguir definidas no conjunto $\{1,2,3,4\}$, determinar se elas possuem
+reflexividade, anti-reflexividade, simetria, anti-simetria,
+transitividade e equivalência:
+
+\begin{enumerate}[a)]
+\item $R_1=\{\<2,2\>,\<2,3\>,\<2,4\>,\<3,2\>,\<3,3\>,\<3,4\>\}$ % N N N N S N
+\item $R_2=\{\<1,1\>,\<1,2\>,\<2,1\>,\<2,2\>,\<3,3\>,\<4,4\>\}$ % S N S N S S
+\item $R_3=\{\<2,4\>,\<4,2\>\}$ % N S S N N N 
+\item $R_4=\{\<1,2\>,\<2,3\>,\<3,4\>\}$ % N S N S N N
+\item $R_5=\{\<1,1\>,\<2,2\>,\<3,3\>,\<4,4\>\}$ % S N S S S S
+\item $R_6=\{\<1,3\>,\<1,4\>,\<2,3\>,\<2,4\>,\<3,1\>,\<3,4\>\}$ % N S N N N N
+\end{enumerate}
+
+\begingroup\noindent{\bf Resposta:}
+\begin{center}\footnotesize
+\begin{tabular}{c|c|c|c|c|c|c}\hline
+ &  reflexividade & anti-reflexividade& simetria& anti-simetria&transitividade & equivalência\\\hline
+ a)& N&N&N&N&S&N\\\hline
+ b)& S&N&S&N&S&S\\\hline
+ c)& N&S&S&N&N&N\\\hline
+ d)& N&S&N&S&N&N\\\hline
+ e)& S&N&S&S&S&S\\\hline
+ f)& N&S&N&N&N&N\\\hline
+\end{tabular}
+\end{center}
+\endgroup
+
+\begin{thebibliography}{1}
+\bibitem[Menezes, 2009]{paulo2010} Paulo Blauth Menezes, Lara Vieira
+Toscani, Javier García López. \emph{Aprendendo matemática discreta com
+exercícios}. Editora Bookman, 2009.
+
+\bibitem  [Scheinerman, 2003]{scheinerman2003} Edward R. Scheinerman. Matemática
+  discreta: uma introdução. São Paulo: Thomson Learning, 2003.
+\end{thebibliography}
+
+

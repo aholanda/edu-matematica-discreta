@@ -1,0 +1,332 @@
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+
+\documentclass[twoside,a4wide,12pt]{book}
+
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\newtheorem{definition}{Definição}
+
+%def exercise
+\newcounter{exc}\setcounter{exc}{0}
+\def\exercise{\bigskip
+\addtocounter{exc}{1}\paragraph{Exercício \arabic{exc}.}}
+
+%defpar
+\newcommand\ordpar[1]{{\langle #1\rangle}}%
+
+%def newMarginpar
+\setlength{\marginparwidth}{1.2in} \let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize
+  #1]%
+  {\raggedright\scriptsize #1}}
+
+\author{Adriano J. Holanda}
+\date{\today}
+\title{Matemática Discreta}
+
+\begin{document}
+
+\chapter{Noções básicas de teoria dos conjuntos}
+
+\section{Introdução}
+
+\begin{definition}
+  \label{def:set}
+  Um {\bf conjunto\/} é uma coleção de zero ou mais objetos distintos,
+  chamados {\bf elementos\/} do conjunto, os quais não possuem
+  qualquer ordem associada.
+\end{definition}
+
+
+\noindent Exemplos:
+\begin{tabbing}
+\hspace{1cm}\={\bf Vogais}$=\{a,e,i,o,u\}$\\
+\>{\bf Dígitos}$=\{0,1,2,3,4,\ldots,9\}$\\
+\>{\bf Pares}$=\{0,2,4,6,\ldots\}$\\
+\>{\bf DiasSemana}$=\{seg,ter,qua,qui,sex,sab,dom\}$\\
+\>{\bf Meses}$=\{jan,fev,mar,abr,mai,jun,jul,ago,set,out,nov,dez\}$
+\end{tabbing}
+
+A Definição~\ref{def:set} é uma tentativa de definir intuitivamente,
+já que a frase ``conjunto é uma coleção'' não explica muito. O
+conceito de conjunto é tão fundamental que não tentaremos defini-lo
+rigorosamente.
+
+
+\paragraph{Representação.} Um conjunto pode ser representado de duas
+maneiras:
+
+\begin{description}
+\item[1. Enumeração:] $\{$Bruna, João, Pedro, Paulo, Maria, Joana, Júlia$\}$
+\item[2. Descrição:] $\{x|x$ cursa a disciplina de Matemática Discreta
+  da Instituição$\}$
+\end{description}
+
+Na enumeração fazemos uma listagem de todos os elementos do
+conjunto. Se a lista for muito grande as reticências podem ser usadas
+indicando que o conjunto prossegue segundo alguma ``lei de geração'',
+como por exemplo o conjunto dos números pares:
+\begin{center}
+  $\{0,2,4,6,8,10,\ldots\}$.
+\end{center}
+
+A representação por descrição utiliza alguma propriedade comum a todos
+os elementos do conjunto para selecionar seus elementos. No exemplo a
+propriedade é ``todos os alunos que cursam a disciplina Matemática
+Discreta''. No exemplo que usa enumeração estes alunos foram listados
+individualmente.
+
+\section{Pertinência}
+
+Deixaremos também indefinida a noção de {\bf pertinência} $\in$, onde
+\begin{center}
+  $x \in C$
+\end{center}
+significa que $x$ pertence ao conjunto $C$. Caso contrário, afirmamos
+que $x$ {\it não\/} pertence ao conjunto $C$, denotado por
+\begin{center}
+  $x\notin C$.
+\end{center}
+
+\noindent Exemplos:
+\begin{tabbing}
+  \hspace{1cm}\=1. $a\in$ {\bf Vogais}\\
+  \>2. $a\notin$ {\bf Dígitos}\\
+\end{tabbing}
+
+\subsection{Conjuntos especiais}
+
+\paragraph{Conjunto vazio.} O conjunto sem elementos $\{\ \}$ é
+representado pelo símbolo~$\emptyset$.
+
+\bigskip
+\noindent Exemplos:
+\begin{tabbing}
+  \hspace{1cm}\=1. $\{x|x$ é par e ímpar$\}$\\
+  \>2. $\{$conjuntos de todas as pessoas com mais de 5 metros de altura$\}$\\
+\end{tabbing}
+
+\section{Conjuntos finitos e infinitos}
+
+Um conjunto é finito quando seus elementos podem ser listados
+exaustivamente, caso contrário, é denotado como infinito.
+
+\noindent Exemplos
+\noindent Conjunto finito
+\begin{tabbing}
+\hspace{1cm}\=1. {\bf Vogais}$=\{a,e,i,o,u\}$\\
+\>2. {\bf Dígitos}$=\{0,1,2,3,4,\ldots,9\}$\\
+\>3. {\bf C}$=\{x|x$ é corintiano$\}$\\
+\end{tabbing}
+
+\noindent Conjunto infinito
+\begin{tabbing}
+\hspace{1cm}\=1. $\mathbb{N}$ \hspace{6cm}\= conjunto dos números naturais\\
+\>2. $\mathbb{Z}$\>conjunto dos números inteiros\\
+\>3. $\mathbb{Q}$\>conjunto dos números racionais\\
+\>4. $\mathbb{I}$\>conjunto dos números irracionais\\
+\>5. $\mathbb{R}$\>conjunto dos números reais\\
+\>6. {\bf Pares}$=\{y|y=2x$ e $x \in \mathbb{N}\}$\\
+\end{tabbing}
+
+\section{Relação entre conjuntos ou continência}
+
+Se cada elemento de um conjunto $A$ for também elemento de outro
+conjunto $B$ dizemos que {\it está contido} em $B$, ou que $A$
+{\it é um subconjunto} de $B$, e denotamos este fato através da
+notação:
+$$A \subseteq B.$$
+
+\noindent ou alternativamente, denotamos que $B$ contém $A$ por:
+$$B\supseteq A.$$
+
+\noindent Exemplos:
+
+\begin{tabbing}
+\hspace{1cm}\=1. $\{a,b\}\subseteq\{b,a\}$\\
+\>2. $\{a,b\}\subseteq\{a,b,c\},\{a,b\}\subset \{a,b,c\}$\\
+\>3. $\{1,2,3\}\subseteq\mathbb{N},\{1,2,3\}\subset\mathbb{N}$\\
+\>4. $\mathbb{N}\subseteq\mathbb{Z}, \mathbb{N}\subset\mathbb{Z}$\\
+\>5. $\emptyset\subseteq\{a,b,c\},\emptyset\subset\{a,b,c\}$\\
+\>6. $\emptyset\subseteq\mathbb{N},\emptyset\subset\mathbb{N}$
+\end{tabbing}
+
+
+A inclusão própria ocorre quando todos os elementos de $A$ são
+elementos de $B$, porém nem todos elementos de $B$ são elementos de
+$A$, denotamos este fato da seguinte maneira:
+$$A \subset B.$$
+
+Dizemos que $A$ é um subconjunto próprio de $B$, ou que $A$ está
+propriamente contido em $B$ e equivale a notação: $$A\subseteq B\ e\
+A\neq B.$$
+
+Se $A$ e $B$ possuem exatamente os mesmos elementos, eles são o mesmo
+conjunto e representamos da seguinte forma:
+$$A=B.$$
+
+\noindent Exemplos:
+
+\begin{tabbing}
+\hspace{1cm}\=1. $\{1,2,3\}=\{x\in\mathbb{N}\mid x>0\ e\ x<4b\}$\\
+\>2. $\mathbb{N}=\{x\in\mathbb{Z}\mid x\geq 0\}$\\
+\>3. $\{1,2,3\} = \{3,3,2,2,2,1,1,1,1,1\}$\\
+\end{tabbing}
+
+\exercise{} Classifique as seguintes afirmações em verdadeiras ou
+falsas:
+
+\begin{enumerate}[(a)( )]
+\item $c\in\{a,c,e\}$
+\item $e\notin\{a,b,c\}$
+\item $\{0,1,2\}\subset\{0,1,2\}$
+\item $\{0,1,2\}\subseteq\{0,1,2\}$
+\item $\{a,b\}\subseteq\{a,b,c\}$
+\item $a\in\{b,\{a\}\}$
+\item $\{a\}\in\{b,\{a\}\}$
+\item ${a}\in\{c,\{b\},a\}$
+\item $\emptyset\in\{a,b,c\}$
+\item $\{0,1,2\}\subseteq\{3,2,5,4,6\}$
+\end{enumerate}
+
+\section{Operações sobre conjuntos}
+Outra maneira de caracterizar conjuntos, além da enumeração e
+descrição, é gerá-los através de operações. Se quisermos um conjunto
+formado pelos elementos de $A$ e $B$, aplicamos a operação de {\it
+  união}\marginpar{união} sobre os conjuntos denotando por $$A \cup B.$$
+
+Por definição, o conjunto $A \cup B$ contém todos os elementos que são
+elementos de $A$ ou de $B$.
+
+$$A\cup B = \{x\mid x\in A\ ou\ x\in B\}$$
+
+\noindent Exemplo:
+\begin{tabbing}
+\hspace{1cm}\=Se $A=\{1,2,3\}$ e $B=\{a,b,c\}$, então\\
+\>$A \cup B = \{a,b,c,1,2,3\}$\\
+\end{tabbing}
+
+Outra operação a ser definida é a
+\emph{intersecção}\marginpar{intersecção}, denotada por
+$$A\cap B$$
+que denota os elementos que pertencem tanto a $A$ quanto a $B$, ou
+seja,
+$$A\cap B=\{x\mid x\in A\ e\ x \in B\}.$$
+
+
+\noindent Exemplo:
+\begin{tabbing}
+\hspace{1cm}\=Se $A=\{1,2,3\}$ e $B=\{0,1,2,4,6\}$, então\\
+\>$A \cup B = \{1,2\}$\\
+\end{tabbing}
+
+Dado um universo $U$ e um conjunto $A$ contido em $U$, operação de
+\emph{complemento}\marginpar{complemento} de $A$, denotada por
+$\overline{A}$ é o conjunto de todos os elementos que não pertencem a
+$A$ e pode ser definida como:
+$$\overline{A}=\{x|x\in U\ e\ x\notin A\}$$
+
+\noindent Exemplo:
+\begin{tabbing}
+\hspace{1cm}\=$\overline{U}=\emptyset$\\
+\>$\overline{\emptyset} = U$\\
+\>Supondo o conjunto universo como \={\bf
+  Digitos=}$\{0,1,2,3,4,5,6,7,8,9\}$ e\\
+\>\>$A=\{0,1,3\}$, então\\
+\>\>$\overline{A}=\{2,4,5,6,7,8,9\}$
+\end{tabbing}
+
+Falta definir a operação da \emph{diferença}\marginpar{diferença} como
+$$A-B=\{x\mid x\in A\ e\ x\notin B\},$$
+ou seja, dados os conjuntos $A$ e $B$, o elemento $x$ pertence ao
+conjunto $A-B$ se pertencer ao conjunto $A$ e não pertencer ao
+conjunto $B$.\\
+
+\noindent Exemplo:
+\begin{tabbing}
+\hspace{1cm}\=Se $A=\{0,2,4,6\}$ e $B=\{1,2,3,4\}$, então\\
+\>$A - B = \{0,6\}$\\
+\end{tabbing}
+
+\subsection{Conjunto das partes}
+
+Dado um conjunto $A$, podemos também formar o \emph{conjunto potência}
+\marginpar{potência}
+de $A$ (ou conjunto das partes de $A$), que corresponde ao conjunto de
+todos os subconjuntos de $A$, e denotaremos por
+$\mathcal{P}(A)$. Podemos defini-lo assim: 
+
+$$\mathcal{P}(A)=\{\mathcal{X}\mid\mathcal{X}\in A\}.$$
+
+\noindent Por exemplo, se $A=\{1,2\}$, temos que
+$$\mathcal{P}(A)=\{\emptyset,\{1\},\{2\},\{1,2\}\}.$$
+
+De um modo geral, se um conjunto $A$ tem $n$ elementos,
+$\mathcal{P}(A)$ terá $2^n$ elementos.
+
+\subsection{Produto cartesiano}
+
+Iremos chamar um conjunto de dois elementos de \emph{par}, e como
+qualquer conjunto não possuem relação de ordem, o seguinte fato é
+válido:
+$$\{a,b\}=\{b,a\}.$$
+
+Por outro, se quisermos que os elementos de um par tenham ordem,
+deveremos introduzir a noção de \emph{par ordenado}\marginpar{par
+  ordenado}, que é um tipo especial de conjunto. Assim o par ordenado
+$\langle x,y\rangle$ é definido da seguinte maneira:
+$$\langle x,y\rangle=\{\{x\},\{x,y\}\}.$$
+
+A partir desta definição notamos com mais clareza que $\langle
+a,b\rangle$ é diferente de $\langle a,b\rangle$, pois
+$$\langle a,b\rangle=\{\{a\},\{a,b\}\}$$
+\noindent é diferente de
+$$\langle b,a\rangle=\{\{b\},\{b,a\}\}.$$
+
+A mesma definição pode ser estendida para um conjunto de três
+elementos ordenados, chamado tripla, por exemplo o conjunto $\langle
+a,b,c\rangle$ é diferente de $$\langle c,a,b\rangle$$. De modo
+análogo, temos as quádruplas ordenadas e, no caso geral, sequências
+ordenadas $$\langle a_1,\ldots,a_n\rangle$$ de $n$ elementos -- as
+\emph{n-uplas}, ou \emph{ênuplas}.\marginpar{n-uplas}.
+
+Deste modo, o produto cartesiano de $A$ e $B$, denotado por $A\times
+B$, é o conjunto de pares ordenados $\langle x,y\rangle$, tal que
+$x$ pertence a $A$  e y pertence a $B$, ou seja:
+
+$$A\times B=\{\langle a,b\rangle\mid x\in A\ e\ y\in B\}.$$
+
+\noindent Exemplo:
+\begin{tabbing}
+\hspace{1cm}\=Se $A=\{1,2\}$ e $B=\{a,b\}$, então\\
+\>$A\times B = \{\ordpar{1,a}, \ordpar{1,b},\ordpar{2,a},\ordpar{2,b}\}$\\
+\end{tabbing}
+
+Generalizando para as triplas temos que o produto cartesiano $A\times
+B\times C$ é composto pelas triplas ordenadas, tendo o primeiro
+elemento extraído do conjunto $A$, o segundo de $B$ e o terceiro de
+$C$.
+
+Podemos fazer o produto cartesiano de um conjunto por ele mesmo,
+denotado por $A\times A=A^2$; $A\times A \times A=A^3$; $\ldots$; $A
+\times A$ n vezes é igual a $A^n$, e $A^1$ é ele próprio.
+
+\begin{thebibliography}{99}
+
+\bibitem[Menezes, 2010]{paulo2010} Paulo Blauth Menezes. \emph{Matemática discreta para
+    computação e matemática}. Editora Bookman, $3^a$ edição, 2010.
+
+\bibitem[Mortari, 2001]{mortari2001} Cezar A. Mortari. \emph{Introdução à lógica}. Editora UNESP,
+  2001.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,56 @@
+\newcounter{exno}\setcounter{exno}{0}
+\def\exerc{\paragraph{Exercício \arabic{exno}.}
+  \addtocounter{exno}{1}}
+
+
+\section*{Operação Módulo e Algoritmo de Euclides}
+
+\exerc{} Calcule o máximo divisor comum (mdc) utilizando o algoritmo
+de Euclides, demonstrando os passos intermediários do cálculo:
+
+\begin{enumerate}[(a)]
+\item mdc(20, 25)
+\item mdc(17, 10)
+\item mdc(12, 15)
+\item mdc(21, 9)
+\item mdc(14, 7)
+\item mdc(12, 26)
+\item mdc(18, 10)
+\item mdc(11, 111)
+\end{enumerate}
+
+\def\modsym{\Delta} \def\mod#1#2{$#1\modsym#2$} \exerc{} Realize as
+seguintes operações módulo ($\modsym$), mostrando os cálculos 
+intermediários:
+
+\begin{enumerate}[(a)]
+\begin{minipage}{.5\textwidth}
+\item \mod{12}{5}
+\item \mod{12}{-5}
+\item \mod{-12}{5}
+\item \mod{-12}{-5}
+\item \mod{5}{12}
+\item \mod{4}{12}
+\item \mod{6}{12}
+\item \mod{11}{12}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\item \mod{33}{3}
+\item \mod{14}{1}
+\item \mod{4}{3}
+\item \mod{-39}{21}
+\item \mod{11}{4}
+\item \mod{555}{333}
+\item \mod{333}{555}
+\item \mod{1000}{291}
+\end{minipage}
+\end{enumerate}
+
+\exerc{} No mapeamento do endereço da memória principal para a memória
+cache podemos utilizar a operação módulo para determinar as posições
+de escrita e busca. Supondo que em nosso sistema de computação, a
+memória principal tenha {\bf 16} endereços e a memória cache {\bf 8},
+faça o esquema de distribuição da memória principal para a cache
+utilizando as configurações associativa de {\bf 4} e {\bf 8} vias.
+
+\end{document}

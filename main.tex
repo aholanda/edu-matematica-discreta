@@ -1,0 +1,48 @@
+\documentclass{../lecture}
+
+\usetikzlibrary{calendar,mindmap,shadows,calc,intersections,through,backgrounds,shapes}
+
+\DeclareMathAlphabet\EuRoman{U}{eur}{m}{n}
+\SetMathAlphabet\EuRoman{bold}{U}{eur}{b}{n}
+\newcommand{\erm}{\EuRoman}
+\def\eumath#1{$\erm{#1}$}
+
+% logic equivalent symbol
+\newcommand{\deq}{\mathrel{\stackrel{\scriptscriptstyle\Delta}{=}}}
+
+% format of comments in the text
+\newcommand{\mycomment}[1]{\hspace{1.25cm}\colorbox{black!30}{{\scriptsize\rm#1}}}
+
+% tuple
+\def\tuple#1{\langle#1\rangle}
+\def\tu#1{\langle#1\rangle}
+
+\colorlet{setcolor}{yellow!90!white}
+\def\A{{\erm{A}}}
+\def\B{{\erm{B}}}
+\def\C{{\erm{C}}}
+
+\def\setA{A = \{1,2,4\}}
+\def\setB{B = \{2,3,4,7\}}
+\def\setC{C=\{4,5,7,10\}}
+\def\mysets{\eumath{{\setA, \setB, \setC}}}
+
+\begin{document}
+
+\author{Adriano J. Holanda\\\scriptsize\url{http://holanda.xyz}}
+\def\course{Matemática Discreta}
+
+%\date{2/8/2016}
+%\input ementa
+%\input intro
+
+%\date{8/8/2016}
+%\input conjuntos
+%\date{16/8/2016}
+%\input relacoes
+
+%\input inducao % rever, pois parece estar pesado para os alunos
+\date{1/11/2016}
+\input mdc
+
+\end{document}
