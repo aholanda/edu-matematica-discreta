@@ -1,4 +1,4 @@
-# Recursos para a disciplina "Matemática Discreta"
+# Curso de Matemática Discreta
 
 ## Conteúdo
 - [Introdução](https://drive.google.com/file/d/1DBfF5EHtdzHuqdvqHoQUYoXt8LIQeMsp/view)
