@@ -1,0 +1,129 @@
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatibility definitions
+    \def\gt{>}
+    \def\lt{<}
+    \let\Oldtex\TeX
+    \let\Oldlatex\LaTeX
+    \renewcommand{\TeX}{\textrm{\Oldtex}}
+    \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+    % Document parameters
+    % Document title
+    \title{MD semana 0}
+    
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    
+\hypertarget{matemuxe1tica-discreta}{%
+\section{Matemática Discreta}\label{matemuxe1tica-discreta}}
+
+\hypertarget{definiuxe7uxe3o}{%
+\subsection{Definição}\label{definiuxe7uxe3o}}
+
+A \textbf{Matemática Discreta} manipula objetos \textbf{contáveis}
+utilizando sistemas matemáticos adequados para cada tipo de problema.
+Exemplo: números inteiros.
+
+Algumas aplicações da Matemática Discreta
+
+\begin{itemize}
+\item
+  Métodos formais para especificação, verificação e validação de
+  software;
+\item
+  Análise da complexidade dos algoritmos;
+\item
+  Algoritmos combinatórios: grafos, expressões booleanas, \(\dots\);
+\item
+  Probablidade;
+\item
+  Computabilidade;
+\item
+  Cálculo numérico;
+\item
+  Criptografia
+\item
+  \(\dots\)
+\end{itemize}
+
+    \hypertarget{alguns-sistemas-matemuxe1ticos-discretos}{%
+\subsection{Alguns Sistemas Matemáticos
+Discretos}\label{alguns-sistemas-matemuxe1ticos-discretos}}
+
+\begin{itemize}
+\item
+  Lógica
+\item
+  Teoria dos Conjuntos
+\item
+  Teoria dos Números
+\item
+  Análise Combinatória
+\item
+  Teoria dos Grafos
+\end{itemize}
+
+    \hypertarget{nouxe7uxf5es-de-luxf3gica}{%
+\subsection{Noções de Lógica}\label{nouxe7uxf5es-de-luxf3gica}}
+
+\hypertarget{axioma-ou-postulado}{%
+\subsubsection{Axioma ou Postulado}\label{axioma-ou-postulado}}
+
+\emph{Axioma} é uma premissa ou ponto de partida para o raciocínio. É
+tão evidente que é aceito como verdadeiro sem controvérsia e sem
+necessidade de prova.
+
+Exemplo: Axioma de Peano para as propriedades dos números naturais.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(0 \in Nat\)
+\item
+  \(x=x\)
+\item
+  \(x=y \Rightarrow y=x\)
+\item
+  \(x=y\wedge y=z\Rightarrow x=z\)
+\end{enumerate}
+
+    \hypertarget{teorema}{%
+\subsubsection{Teorema}\label{teorema}}
+
+\textbf{Teorema} é uma afirmação cuja veracidade pode ser demonstrada
+utilizando operações e argumentos matemáticos aceitáveis.
+
+    \begin{center}
+	    \includegraphics[scale=.6]{img/pitagoras.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{termos-adicionais}{%
+\subsubsection{Termos adicionais}\label{termos-adicionais}}
+
+\begin{itemize}
+\item
+  \textbf{Definição} especifica o significado de palavra ou frase em
+  utilizando conceitos já conhecidos. Também é aceita sem prova.
+\item
+  \textbf{Proposição} é um termo genérico para um teorema sem
+  importância particular. Este termo denota um afirmação que exige um
+  prova simples, enquanto \emph{teorema} é reservado para resultados de
+  maior importância com prova difícil ou longa.
+\item
+  \textbf{Lema} é uma \emph{proposição} que faz parte da prova de um
+  teorema por possuir pouca aplicabilidade.
+\item
+  \textbf{Corolário} é uma \emph{proposição} que segue com pouca ou
+  nenhuma prova, outra definição ou teorema.
+\end{itemize}
+
