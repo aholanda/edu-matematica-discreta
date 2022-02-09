@@ -1,0 +1,211 @@
+    
+\section*{Fundamentos de Lógica}
+
+\subsection*{Lógica Proposicional}
+
+É a matemática de \(2\) (dois) valores Booleanos, \texttt{VERDADEIRO}
+(\texttt{TRUE}, \texttt{T}, \texttt{1}) e \texttt{FALSO}
+(\texttt{FALSE}, \texttt{F}, \texttt{0}), e \(5\) (cinco) operadores.
+
+\subsubsection*{Operadores da Lógica
+Proposicional}
+
+\begin{longtable}[]{@{}lccc@{}}
+& operador & nome & programação\tabularnewline
+\endhead
+1 & \(\land\) & conjunção & \texttt{AND}, \texttt{\&\&}\tabularnewline
+2 & \(\lor\) & disjunção & \texttt{OR},
+\texttt{\textbackslash{}\textbar{}\textbackslash{}\textbar{}}\tabularnewline
+3 & \(\lnot\) & negação & \texttt{NOT}, \texttt{!}\tabularnewline
+4 & \(\implies\) & implicação &\tabularnewline
+5 & \(\equiv\) & equivalência & \texttt{==}\tabularnewline
+\end{longtable}
+
+    \textbf{Lógica Proposicional: Exemplos}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(x \land y\) é \texttt{VERDADEIRO} se \(x\) e \(y\) forem
+  \texttt{VERDADEIRO};
+\item
+  \(x \lor y\) é \texttt{VERDADEIRO} se \(x\) ou \(y\) forem
+  \texttt{VERDADEIRO} (ou ambos);
+\item
+  \(\lnot x\) é \texttt{VERDADEIRO} se \(x\) for \texttt{FALSO};
+\item
+  \(x \implies y\) é \texttt{VERDADEIRO} se \(x\) for \texttt{FALSO} e
+  \(y\) for \texttt{VERDADEIRO} (ou ambos);
+\item
+  \(x\equiv y\) é \texttt{VERDADEIRO} se \(x\) e \(y\) forem
+  \texttt{VERDADEIRO} ou ambos forem \texttt{FALSO}.
+\end{enumerate}
+
+    \textbf{Lógica Proposicional: Tabela-Verdade}
+
+\begin{longtable}[]{@{}llllll@{}}
+\(x\) & \(y\) & & & \(\land\) & \(\lor\)\tabularnewline
+\emph{\texttt{F}} & \emph{\texttt{F}} & & & \texttt{F} &
+\texttt{F}\tabularnewline
+\emph{\texttt{F}} & \emph{\texttt{T}} & & & \texttt{F} &
+\texttt{T}\tabularnewline
+\emph{\texttt{T}} & \emph{\texttt{F}} & & & \texttt{F} &
+\texttt{T}\tabularnewline
+\emph{\texttt{T}} & \emph{\texttt{T}} & & & \texttt{T} &
+\texttt{T}\tabularnewline
+\end{longtable}
+
+    \begin{longtable}[]{@{}llllll@{}}
+\(x\) & \(y\) & & & \(\Rightarrow\) & \(\equiv\)\tabularnewline
+\emph{\texttt{F}} & \emph{\texttt{F}} & & & \texttt{T} &
+\texttt{T}\tabularnewline
+\emph{\texttt{F}} & \emph{\texttt{T}} & & & \texttt{T} &
+\texttt{F}\tabularnewline
+\emph{\texttt{T}} & \emph{\texttt{F}} & & & \texttt{F} &
+\texttt{F}\tabularnewline
+\emph{\texttt{T}} & \emph{\texttt{T}} & & & \texttt{T} &
+\texttt{T}\tabularnewline
+\end{longtable}
+
+    \begin{longtable}[]{@{}cc@{}}
+\(x\) & \(\lnot x\)\tabularnewline
+\texttt{F} & \texttt{T}\tabularnewline
+\texttt{T} & \texttt{F}\tabularnewline
+\end{longtable}
+
+\subsection*{Lógica de Predicados (lógica de primeira
+ordem)}
+
+A Lógica de Predicados estende a Lógica Proposicional com a adição de
+operadores que trabalham com conjuntos de elementos.
+
+\textbf{Operadores}
+
+\begin{longtable}[]{@{}cc@{}}
+operador & operação\tabularnewline
+\endhead
+\(\forall\) & quantificação universal (para todo)\tabularnewline
+\(\exists\) & quantificação existencial (existe)\tabularnewline
+\end{longtable}
+
+    \textbf{Exemplos}
+
+\((\forall\ x \in R : S)\) - para todo \(x\) em \(R\), a fórmula \(S\) é
+\texttt{VERDADEIRA};
+
+\((\exists \ x \in R : S)\) - existe \(x\) em R, em que a fórmula \(S\)
+é \texttt{VERDADEIRA}.
+
+\(\forall\ x \in \{2, 3, 4, 5\} : x > 1\)
+
+\(\exists\ x \in \{2, 3, 4, 5\} : x > 2\)
+
+    \(\forall\ x \in N : x\ mod\ 2 = 0\) (é par?) \texttt{F}
+
+\(\exists\ x \in N : x\ mod\ 2 = 0\) (é par?) \texttt{V}
+
+\(\exists\ x \in N : \sqrt{x} = 2\) (é par?) \texttt{V}
+
+\subsection*{Exercícios}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Resolva as expressões a seguir para \((x,y)=(T,T)\), \((x,y)=(T,F)\),
+  \((x,y)=(F,T)\) e \((x,y)=(F,F)\):
+\end{enumerate}
+
+\begin{itemize}
+\item
+  As expressões são sempre avaliadas da esquerda para a direita com
+  exceção da existência de parênteses, por exemplo para
+  \(x \lor (x \land y)\), primeiro avalia-se \((x \land y)\) e depois a
+  disjunção \(\lor\);
+\item
+  \((x,y)=(T,F)\) significa que \(x=T\) e \(y=F\);
+\item
+  Se preferir, monte uma tabela-verdade para cada expressão.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \(x\land y \lor x\)
+\item
+  \(\neg (x\lor y \land x)\)
+\item
+  \(x \land y \implies \neg x\)
+\item
+  \((x \implies y) \equiv (x \lor y)\)
+\item
+  \((x \land y) \equiv (x \lor y)\)
+\item
+  \((\neg x \land y) \equiv (x \lor \neg y)\)
+\item
+  \(\neg(x \implies y) \equiv (x \land y)\)
+\item
+  \(x \lor (x \lor y) \land \neg(x \land \neg y)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  Para o conjunto dos números inteiros \(Z\)
+  (\(\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\)). Avalie as seguintes
+  expressões:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \(\forall x \in Z : x \text{ é par} \land\ x \text{ é impar}\)
+\item
+  \(\exists x \in Z : x \text{ é par} \land\ x \text{ é impar}\)
+\item
+  \(\forall x \in Z : x \text{ é par} \lor\ x \text{ é impar}\)
+\item
+  \(\exists x \in Z : x \text{ é par} \lor\ x \text{ é impar}\)
+\item
+  \(\forall x \in Z : x \text{ é primo}\)
+\item
+  \(\exists x \in Z : x \text{ é primo}\)
+\item
+  \(\neg(\forall x \in Z : x \text{ é primo} )\)
+\item
+  \(\forall x \in \{2,4,6,8\}, \forall y \in \{1,3,5,7\} : x + y = 11\)
+\item
+  \(\exists x \in \{2,4,6,8\}, \forall y \in \{1,3,5,7\} : x + y = 11\)
+\item
+  \(\exists x \in \{2,4,6,8\}, \exists y \in \{1,3,5,7\} : x + y = 11\)
+\item
+  \(\forall x \in \{0\}, \forall y \in \{1,3,5,7\} : xy = 0\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  {[}Scheinerman{]} Assinale como verdadeira (T) ou false (F) cada uma
+  das expressões sobre inteiros a seguir:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \(\forall x, \forall y : x + y = 0\)
+\item
+  \(\forall x, \exists y : x + y = 0\)
+\item
+  \(\exists x, \forall y : x + y = 0\)
+\item
+  \(\exists x, \exists y : x + y = 0\)
+\item
+  \(\forall x, \forall y : xy = 0\)
+\item
+  \(\forall x, \exists y : xy = 0\)
+\item
+  \(\exists x, \forall y : xy = 0\)
+\item
+  \(\exists x, \exists y : xy = 0\)
+\end{enumerate}
