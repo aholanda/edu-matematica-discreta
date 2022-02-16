@@ -1,24 +1,26 @@
-    
+\def\T{V}
+\def\F{F}
+
 \section*{Fundamentos de Lógica}
 
 \subsection*{Lógica Proposicional}
 
 É a matemática de \(2\) (dois) valores Booleanos, \texttt{VERDADEIRO}
-(\texttt{TRUE}, \texttt{T}, \texttt{1}) e \texttt{FALSO}
-(\texttt{FALSE}, \texttt{F}, \texttt{0}), e \(5\) (cinco) operadores.
+(\texttt{TRUE}, \texttt{T}, \texttt{\T} \texttt{1}) e \texttt{FALSO}
+(\texttt{FALSE}, \texttt{F}, \texttt{\F}, \texttt{0}), e \(5\) (cinco) operadores.
 
 \subsubsection*{Operadores da Lógica
 Proposicional}
 
-\begin{longtable}[]{@{}lccc@{}}
-& operador & nome & programação\tabularnewline
+\begin{longtable}[]{@{}lccc@{}}\hline
+& operador & nome & programação\\\hline
 \endhead
-1 & \(\land\) & conjunção & \texttt{AND}, \texttt{\&\&}\tabularnewline
+1 & \(\land\) & conjunção & \texttt{AND}, \texttt{\&\&}\\
 2 & \(\lor\) & disjunção & \texttt{OR},
-\texttt{\textbackslash{}\textbar{}\textbackslash{}\textbar{}}\tabularnewline
-3 & \(\lnot\) & negação & \texttt{NOT}, \texttt{!}\tabularnewline
-4 & \(\implies\) & implicação &\tabularnewline
-5 & \(\equiv\) & equivalência & \texttt{==}\tabularnewline
+\texttt{\textbackslash{}\textbar{}\textbackslash{}\textbar{}}\\
+3 & \(\lnot\) & negação & \texttt{NOT}, \texttt{!}\\
+4 & \(\implies\) & implicação &\\
+5 & \(\equiv\) & equivalência & \texttt{==}\\\hline
 \end{longtable}
 
     \textbf{Lógica Proposicional: Exemplos}
@@ -45,32 +47,32 @@ Proposicional}
 
 \begin{longtable}[]{@{}llllll@{}}
 \(x\) & \(y\) & & & \(\land\) & \(\lor\)\tabularnewline
-\emph{\texttt{F}} & \emph{\texttt{F}} & & & \texttt{F} &
-\texttt{F}\tabularnewline
-\emph{\texttt{F}} & \emph{\texttt{T}} & & & \texttt{F} &
-\texttt{T}\tabularnewline
-\emph{\texttt{T}} & \emph{\texttt{F}} & & & \texttt{F} &
-\texttt{T}\tabularnewline
-\emph{\texttt{T}} & \emph{\texttt{T}} & & & \texttt{T} &
-\texttt{T}\tabularnewline
+\emph{\texttt{\F}} & \emph{\texttt{\F}} & & & \texttt{\F} &
+\texttt{\F}\tabularnewline
+\emph{\texttt{\F}} & \emph{\texttt{\T}} & & & \texttt{\F} &
+\texttt{\T}\tabularnewline
+\emph{\texttt{\T}} & \emph{\texttt{\F}} & & & \texttt{\F} &
+\texttt{\T}\tabularnewline
+\emph{\texttt{\T}} & \emph{\texttt{\T}} & & & \texttt{\T} &
+\texttt{\T}\tabularnewline
 \end{longtable}
 
     \begin{longtable}[]{@{}llllll@{}}
 \(x\) & \(y\) & & & \(\Rightarrow\) & \(\equiv\)\tabularnewline
-\emph{\texttt{F}} & \emph{\texttt{F}} & & & \texttt{T} &
-\texttt{T}\tabularnewline
-\emph{\texttt{F}} & \emph{\texttt{T}} & & & \texttt{T} &
-\texttt{F}\tabularnewline
-\emph{\texttt{T}} & \emph{\texttt{F}} & & & \texttt{F} &
-\texttt{F}\tabularnewline
-\emph{\texttt{T}} & \emph{\texttt{T}} & & & \texttt{T} &
-\texttt{T}\tabularnewline
+\emph{\texttt{\F}} & \emph{\texttt{\F}} & & & \texttt{\T} &
+\texttt{\T}\tabularnewline
+\emph{\texttt{\F}} & \emph{\texttt{\T}} & & & \texttt{\T} &
+\texttt{\F}\tabularnewline
+\emph{\texttt{\T}} & \emph{\texttt{\F}} & & & \texttt{\F} &
+\texttt{\F}\tabularnewline
+\emph{\texttt{\T}} & \emph{\texttt{\T}} & & & \texttt{\T} &
+\texttt{\T}\tabularnewline
 \end{longtable}
 
     \begin{longtable}[]{@{}cc@{}}
 \(x\) & \(\lnot x\)\tabularnewline
-\texttt{F} & \texttt{T}\tabularnewline
-\texttt{T} & \texttt{F}\tabularnewline
+\texttt{\F} & \texttt{\T}\tabularnewline
+\texttt{\T} & \texttt{\F}\tabularnewline
 \end{longtable}
 
 \subsection*{Lógica de Predicados (lógica de primeira
@@ -100,19 +102,19 @@ operador & operação\tabularnewline
 
 \(\exists\ x \in \{2, 3, 4, 5\} : x > 2\)
 
-    \(\forall\ x \in N : x\ mod\ 2 = 0\) (é par?) \texttt{F}
+    \(\forall\ x \in N : x\ mod\ 2 = 0\) (é par?) \texttt{\F}
 
 \(\exists\ x \in N : x\ mod\ 2 = 0\) (é par?) \texttt{V}
 
-\(\exists\ x \in N : \sqrt{x} = 2\) (é par?) \texttt{V}
+\(\exists\ x \in N : \sqrt{x} = 2\) \texttt{V}
 
 \subsection*{Exercícios}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Resolva as expressões a seguir para \((x,y)=(T,T)\), \((x,y)=(T,F)\),
-  \((x,y)=(F,T)\) e \((x,y)=(F,F)\):
+  Resolva as expressões a seguir para \((x,y)=(\T,\T)\), \((x,y)=(\T,\F)\),
+  \((x,y)=(\F,\T)\) e \((x,y)=(\F,\F)\):
 \end{enumerate}
 
 \begin{itemize}
@@ -122,7 +124,7 @@ operador & operação\tabularnewline
   \(x \lor (x \land y)\), primeiro avalia-se \((x \land y)\) e depois a
   disjunção \(\lor\);
 \item
-  \((x,y)=(T,F)\) significa que \(x=T\) e \(y=F\);
+  \((x,y)=(\T,\F)\) significa que \(x=\T\) e \(y=\F\);
 \item
   Se preferir, monte uma tabela-verdade para cada expressão.
 \end{itemize}
@@ -186,7 +188,7 @@ operador & operação\tabularnewline
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{2}
 \item
-  {[}Scheinerman{]} Assinale como verdadeira (T) ou false (F) cada uma
+  {[}Scheinerman{]} Assinale como verdadeira (\T) ou false (\F) cada uma
   das expressões sobre inteiros a seguir:
 \end{enumerate}
 
