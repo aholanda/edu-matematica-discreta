@@ -1,17 +1,30 @@
-\documentclass[a4paper]{article}
+\documentclass[hmargin=2cm,vmargin=2cm]{article}
 
+\usepackage{amssymb,amsmath,amsfonts,euler}
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage[
+	colorlinks=true,
+	anchorcolor=blue,
+	linkcolor=blue,
+	urlcolor=blue,
+]{hyperref}
 \usepackage{longtable}
+\usepackage{setspace}
 \usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{xcolor}
+
+% Turn off numbering in sections
+\setcounter{secnumdepth}{0}
 
 \author{Adriano J. Holanda}
 \title{Matemática Discreta}
-\date{2022-02-15}
+\date{2022-02-22}
 
 \begin{document}
 \maketitle
 %\input intro
-\input logica
+%\input logic
+\input set 
 \end{document}
