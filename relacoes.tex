@@ -1,0 +1,269 @@
+\section{Relações}
+
+    \textbf{Alguns conjuntos importantes}
+
+\(\mathbb{B}\) = valores Boolean = \(\{true, false\}\)
+
+\(\mathbb{N}\) = números naturais = \{0, 1, 2, 3, . . . \}
+
+\(\mathbb{Z}\) = inteiros = \{. . . , −3, −2, −1, 0, 1, 2, 3, . . . \}
+
+\(\mathbb{Z}^+\) = \(\mathbb{Z}_{≥1}\) = inteiros positivos = \{1, 2, 3,
+. . . \}
+
+\(\mathbb{R}\) = conjunto dos números reais
+
+\(\mathbb{R}^+\) = \(\mathbb{R}_{>0}\) = conjunto dos números reais
+positivos
+
+\(\mathbb{C}\) = conjunto dos números complexos
+
+\(\mathbb{Q}\) = conjunto dos números racionais
+
+    \hypertarget{definiuxe7uxe3o}{%
+\subsection{Definição}\label{definiuxe7uxe3o}}
+
+Sejam \(A\) e \(B\) conjuntos. Uma \textbf{relação} \(R\) de \(A\) em
+\(B\) é um subconjunto de produto cartesiano \(A\times B\), ou seja:
+
+\[R=A\subseteq B\]
+
+sendo que:
+
+\(A\) é denominado \emph{domínio} de \(R\) e
+
+\(B\) \emph{contradomínio} de \(R\).
+
+    Uma \textbf{relação} \(R\subseteq A \times B\) também é denotada como
+
+\[R: A\rightarrow B\]
+
+e um elemento \((a,b)\in R\) é frequentemente denotado de forma infixada
+como
+
+\[a\ R\ b\]
+
+    \hypertarget{exemplo}{%
+\subsubsection{Exemplo}\label{exemplo}}
+
+Sejam \(A=\{a\}\), \(B=\{a,b\}\) e \(C=\{0,1,2\}\). Então são relações:
+
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  \(\emptyset\) é uma \textbf{relação} de \(A\) em \(B\), \(A\) em \(C\)
+  e \(B\) em \(C\);
+\end{enumerate}
+
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{1}
+\item
+  \(A\times B=\{(a,a), (a,b)\}\) é uma \textbf{relação} com origem em
+  \(A\) e destino em \(B\);
+\end{enumerate}
+
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{2}
+\item
+  Considerando o domínio \(A\) e o contradomínio \(B\), a
+  \textbf{relação} de \emph{igualdade} é \(\{(a,a)\}\);
+\end{enumerate}
+
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{3}
+\item
+  \(\{(0,1),(0,2),(1,2)\}\) é a \textbf{relação} ``\emph{menor que}''
+  (\(<\)) de \(C\) em \(C\);
+\end{enumerate}
+
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{4}
+\item
+  \(\{(0,a),(1,b)\}\) é uma \textbf{relação} de \(C\) em \(B\).
+\end{enumerate}
+
+\subsection{Domínio de definição, conjunto
+imagem}
+
+\subsubsection{Definição}
+
+Seja \(R: A\rightarrow B\) uma \textbf{relação}. Então:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  Se \((a,b)\in R\), então afirma-se que \(R\) está \emph{definida} para
+  \(A\), e que \(b\) é a imagem de \(a\);
+\end{enumerate}
+
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{1}
+\item
+  O conjunto de todos os elementos de \(A\) para o qual \(R\) está
+  definida é denomindo \emph{domínio de definição};
+\end{enumerate}
+
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{2}
+\item
+  O conjunto de todos os elementos de \(B\), imagem de \(R\), é
+  denomindo \emph{conjunto imagem}.
+\end{enumerate}
+
+    \textbf{Exemplo}
+
+Sejam \(A=\{a\}\), \(B=\{a,b\}\) e \(C=\{0,1,2\}\), então:
+
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  Para a \textbf{relação} \(\emptyset\): \(A\rightarrow B\), o domínio
+  de definição e o conjunto imagem são \emph{vazios};
+\end{enumerate}
+
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{1}
+\item
+  Para a endorrelação\(^*\) (C,\textless), definida por
+  \(\{(0,1),(0,2),(1,2)\}\), o domínio de definição é \(\{0,1\}\) e a
+  imagem é \(\{1,2\}\); --- \(^*\) Endorrelação ou autorrelação é uma
+  relação \(R:A\rightarrow A\) (origem e destino no mesmo conjunto).
+\end{enumerate}
+
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{2}
+\item
+  Para a relação \(=: A\rightarrow B\), o conjunto \{A\} é o domínio de
+  definição e o cojunto imagem.
+\end{enumerate}
+
+    \textbf{Exemplo - Banco de Dados Relacional}*
+
+Sejam o conjunto de países
+\[P=\{\text{"Brasil"},\text{"Turquia"},\text{"Alemanha"}, \text{"Coreia do Sul"},\text{"Austrália"}\}\]
+e o conjunto de continentes
+\[C=\{\text{"América"},\text{"Oceania"}, \text{"África"},\text{"Ásia"}, \text{"Europa"}\}\].
+
+A \textbf{relação}
+\(R=\{(x,y)\in P\times C\ :\ x\text{ localiza-se em }y\}\) resultaria
+
+\[R=\{(\text{"Brasil"},\text{"América"}),(\text{"Turquia"},\text{"Europa"}),\]
+\[(\text{"Turquia"},\text{"Ásia"}),(\text{"Alemanha"},\text{"Europa"}),\]
+\[(\text{"Coreia do Sul"},\text{"Ásia"}),(\text{"Austrália"},\text{"Oceania"})\}\]
+
+    \[R=\{(\text{"Brasil"},\text{"América"}),(\text{"Turquia"},\text{"Europa"}),\]
+\[(\text{"Turquia"},\text{"Ásia"}),(\text{"Alemanha"},\text{"Europa"}),\]
+\[(\text{"Coreia do Sul"},\text{"Ásia"}),(\text{"Austrália"},\text{"Oceania"})\}\]
+
+\begin{longtable}[]{@{}lc@{}}
+País & Continente\tabularnewline
+\endhead
+``Brasil'' & ``América''\tabularnewline
+``Turquia'' & ``Europa''\tabularnewline
+``Turquia'' & ``Ásia''\tabularnewline
+``Alemanha'' & ``Europa''\tabularnewline
+``Coreia do Sul'' & ``Ásia''\tabularnewline
+``Austrália'' & ``Oceania''\tabularnewline
+\end{longtable}
+
+    \hypertarget{relauxe7uxe3o-inversa}{%
+\subsection{Relação Inversa}\label{relauxe7uxe3o-inversa}}
+
+Seja \(R\) uma relação. A \textbf{inversa} de \(R\), denotada por
+\(R^{-1}\), é a \textbf{relação} formada invertendo-se todos os pares
+ordenados em \(R\), e sua fórmula é
+
+\[R^{-1}=\{(x,y)\ :\ (y,x)\in R\}\]
+
+    \textbf{Exemplo}
+
+Seja
+
+\[R=\{(1,5),(2,6),(3,7),(3,8)\}\]
+
+então,
+
+\[R^{-1}=\{(5,1),(6,2),(7,3),(8,3)\}\]
+
+\subsection{Exercícios}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Sejam \(A=\{2,3,4,5\}\) e \(B=\{3,4,5,6,10\}\), para cada uma das
+  seguintes \textbf{relações}:
+\end{enumerate}
+
+\begin{enumerate}
+\item
+  \(R_1=\{(x,y)\in A\times B \ :\ x|y\}\)
+\item
+  \(R_2=\{(x,y)\in A\times B \ :\ x=y+1\}\)
+\item
+  \(R_3=\{(x,y)\in A\times B \ :\ xy=12\}\)
+\item
+  \(R_4=\{(x,y)\in A\times B \ :\ x\geq y\}\)
+\end{enumerate}
+
+\begin{itemize}
+\item
+  explicite as tuplas da \textbf{relação};
+\item
+  faça um representação gráfica no plano cartesiano;
+\item
+  determine o domínio de definição;
+\item
+  determine o conjunto imagem.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  {[}Scheinerman{]} Determine \(R^{-1}\) para cada uma das seguintes
+  relações:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  \(R_1=\{(1,2),(2,3),(3,4)\}\)
+\item
+  \(R_2=\{(1,1),(2,2),(3,3)\}\)
+\item
+  \(R_3=\{(x,y)\ :\ x,y \in \mathbb{Z}, x-y=1\}\)
+\item
+  \(R_4=\{(x,y)\ :\ x,y \in \mathbb{N}, x|y\}\)
+\item
+  \(R_5=\{(x,y)\ :\ x,y \in \mathbb{Z}, xy>0\}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{itemize}
+\item
+  \(x|y\) significa que \(x\) é divisível por \(y\).
+\end{itemize}
+
+    \hypertarget{bibliografia}{%
+\subsection{Bibliografia}\label{bibliografia}}
+
+\begin{itemize}
+\item
+  Edward R. Scheinerman.
+  \href{https://www.amazon.com.br/Matem\%C3\%A1tica-discreta-introdu\%C3\%A7\%C3\%A3o-Edward-Scheinerman/dp/8522125341/}{``Matemática
+  discreta: Uma introdução''}, 2a. edição. Cengage Learning, 2011.
+\item
+  Paulo Blauth Menezes.
+  \href{https://www.amazon.com.br/Matem\%C3\%A1tica-Discreta-para-Computa\%C3\%A7\%C3\%A3o-Inform\%C3\%A1tica/dp/8582600240}{``Matematica
+  Discreta para Computação e Informática''}, 3a. edição. Editora
+  Bookman, 2010.
+\end{itemize}
