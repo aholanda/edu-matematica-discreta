@@ -1,5 +1,6 @@
-\documentclass[a4paper]{article}
+\documentclass{beamer}
 
+<<<<<<< HEAD
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -7,14 +8,45 @@
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{tikz}
+\usetikzlibrary{calendar,mindmap,shadows,calc,intersections,through,backgrounds,shapes}
 
-\author{Adriano J. Holanda}
-\title{Matemática Discreta}
-\date{2022-02-15}
+\DeclareMathAlphabet\EuRoman{U}{eur}{m}{n}
+\SetMathAlphabet\EuRoman{bold}{U}{eur}{b}{n}
+\newcommand{\erm}{\EuRoman}
+\def\eumath#1{$\erm{#1}$}
+
+% logic equivalent symbol
+\newcommand{\deq}{\mathrel{\stackrel{\scriptscriptstyle\Delta}{=}}}
+
+% format of comments in the text
+\newcommand{\mycomment}[1]{\hspace{1.25cm}\colorbox{black!30}{{\scriptsize\rm#1}}}
+
+% tuple
+\def\tuple#1{\langle#1\rangle}
+\def\tu#1{\langle#1\rangle}
+
+\colorlet{setcolor}{yellow!90!white}
+\def\A{{\erm{A}}}
+\def\B{{\erm{B}}}
+\def\C{{\erm{C}}}
+
+\def\setA{A = \{1,2,4\}}
+\def\setB{B = \{2,3,4,7\}}
+\def\setC{C=\{4,5,7,10\}}
+\def\mysets{\eumath{{\setA, \setB, \setC}}}
 
 \begin{document}
-\maketitle
+
+\author{Adriano J. Holanda}
+\def\course{Matemática Discreta}
+
 %\input intro
+
 %\input logica
-\input conjuntos
+%\input conjuntos
+%\input relacoes
+
+%\input inducao % rever, pois parece estar pesado para os alunos
+%\input mdc
+
 \end{document}

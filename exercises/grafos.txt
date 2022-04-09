@@ -1,0 +1,47 @@
+﻿Exercícios de “Matemática Discreta”
+prof. Adriano J. Holanda
+FAFRAM
+Grafos e Digrafos
+
+
+1. Para cada um dos grafos e digrafos a seguir:
+
+
+G1 = {V1,E1}
+V1 = {0,1,2,3,4,5}
+E1 = {{0,1}, {0,2}, {0,5}, {1,2}, {2,3}, {2,4}, {3,5}}
+	
+
+
+
+G2 = {V2,E2}
+V2 = {A,B,C,E,F,I}
+E2 = {{A,E}, {B,C}, {B,E}, {C,F}, {F,I}}
+	
+
+
+
+G3 = {V3,E3}
+V3 = {0,1,2,3,4,5,6,7,8,9,10,11,12}
+E3 = {(0,1), (0,5), (2,0), (2,3), (3,2), (3,5), (4,2), 
+      (4,3), (5,4), (6,0), (6,4), (6,8), (6,9), (7,9), 
+      (8,6), (9,10), (9,11), (10,12), (11,4), (11,12), 
+      (12,9)}
+	
+
+
+
+G4 = {V4,E4}
+V4 = {A,B,C,D,E,F,G,HI}
+E4 = {(A,B), (A,F), (B,C), (B,E), (C,D), (D,B), (E,D), 
+      (E,G), (F,E), (F,G), (G,F), (H, G)}
+	
+
+1. Desenhe sua representação gráfica;
+2. Liste todos os ciclos encontrados;
+3. Calcule o grau de cada vértice;
+4. Faça a busca em profundidade, listando a sequência dos vértices visitados;
+5. Faça a busca em largura, listando a sequência dos vértices visitados.
+
+
+Observação: Durante a busca, na seleção do próximo vértice vizinho a ser visitado, escolha o menor numericamente ou o que vem primeiro alfabeticamente. Exemplo, entre 1 e 4, escolha o 1; e entre B e F, escolha o B.

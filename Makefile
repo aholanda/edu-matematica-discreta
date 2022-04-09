@@ -1,14 +1,13 @@
-TEXS=$(wildcard *.tex)
-PDFS=$(patsubst %.tex,%.pdf,$(TEXS))
+trash := main.aux main.log main.out main.pdf
 
-.PHONY: clean cleanall
+
+main.pdf: main.aux
+	xelatex main
+
+main.aux: main.tex $(wildcard *.tex)
+	xelatex main
 
 clean:
-	$(RM) `cat ../.gitignore` 
+	$(RM) $(trash)
 
-cleanall: clean
-	$(RM) $(PDFS)
-
-$(PDFS): $(TEXS)
-	pdflatex $(patsubst %.pdf,%.tex,$@) && \
-	pdflatex $(patsubst %.pdf,%.tex,$@) 
+.PHONY: clean cleanall
