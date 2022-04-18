@@ -1,5 +1,8 @@
 main.pdf
 
+# ignore raw journal org file
+journal.org
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
