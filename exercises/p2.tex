@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 
 \usepackage[brazil]{babel}
 \usepackage{fontspec}
@@ -14,14 +14,14 @@
 
 \title{$2^a$ Prova de Matemática Discreta}
 \author{prof. Adriano J. Holanda}
-\date{29 de novembro de 2016}
-
+%\date{29 de novembro de 2016}
+\date{24 de maio de 2022}
 
 \begin{document}
 \maketitle
 
 \noindent Faculdade ``Dr. Francisco Maeda'' -- FAFRAM\\
-\noindent Curso: Sistemas de Informação, 4$^o$ Ciclo\\
+%\noindent Curso: Sistemas de Informação, 4$^o$ Ciclo\\
 \begin{minipage}{.225\textwidth}
 \noindent Nome completo:
 \end{minipage}
@@ -29,18 +29,34 @@
   {$\rightarrow$}~\hrule
 \end{minipage}
 
-\ex{2} Desenvolva as seguintes expressões utilizando o triângulo de Pascal:
+%% \ex{2} Desenvolva as seguintes expressões utilizando o triângulo de Pascal:
+
+%% \begin{enumerate}[(a)]
+%% \begin{minipage}{.5\textwidth}
+%% \item $\left( \frac{x^3}{2} - \frac{1}{y^2}\right)^4$ 
+%% \end{minipage}
+%% \begin{minipage}{.5\textwidth}
+%% \item $\left( 2x^2 + \frac{1}{x^2}\right)^3$ 
+%% \end{minipage}
+%% \end{enumerate}
+
+\ex{4} Efetue as operações {\tt módulo} ($\Delta$) a seguir, mostrando
+os cálculos intermediários:
 
 \begin{enumerate}[(a)]
 \begin{minipage}{.5\textwidth}
-\item $\left( \frac{x^3}{2} - \frac{1}{y^2}\right)^4$ 
+\item \mod{11}{3}
+\item \mod{11}{-3}
+%\item \mod{-11}{3}
 \end{minipage}
 \begin{minipage}{.5\textwidth}
-\item $\left( 2x^2 + \frac{1}{x^2}\right)^3$ 
+%\item \mod{-11}{-3}
+\item \mod{555}{333}
+\item \mod{1000}{321}
 \end{minipage}
 \end{enumerate}
 
-\ex{3} Ache o máximo divisor comum (mdc), demonstrando os passos
+\ex{4} Ache o máximo divisor comum (mdc), demonstrando os passos
 intermediários das operações, utilizando o algoritmo de Euclides para
 os seguintes valores:
 
@@ -48,28 +64,12 @@ os seguintes valores:
 \begin{minipage}{.5\textwidth}
 \item mdc(10, 4)
 \item mdc(17, 11)
-\item mdc(121, 15)
+%\item mdc(121, 15)
 \end{minipage}
 \begin{minipage}{.5\textwidth}
 \item mdc(21, 11)
 \item mdc(21, 7)
-\item mdc(31, 26)
-\end{minipage}
-\end{enumerate}
-
-\ex{3} Efetue as operações {\tt módulo} ($\Delta$) a seguir, mostrando
-os cálculos intermediários:
-
-\begin{enumerate}[(a)]
-\begin{minipage}{.5\textwidth}
-\item \mod{11}{3}
-\item \mod{11}{-3}
-\item \mod{-11}{3}
-\end{minipage}
-\begin{minipage}{.5\textwidth}
-\item \mod{-11}{-3}
-\item \mod{555}{333}
-\item \mod{1000}{321}
+%\item mdc(31, 26)
 \end{minipage}
 \end{enumerate}
 
